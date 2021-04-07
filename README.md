@@ -14,3 +14,15 @@ Corresponding documentation:
 [gh-build]: ./.github/workflows/build.yml
 [gh-unit-tests]: ./.github/workflows/unit-tests.yml
 [gh-deploy]: ./.github/workflows/deploy.yml
+
+
+Example:
+
+```yaml
+'on':
+  workflow_run:
+    workflows: ["Build"]
+    types: [completed]
+```
+
+The snippet above will trigger on every `completed` run of the `Build` workflow.
