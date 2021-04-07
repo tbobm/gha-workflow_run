@@ -1,9 +1,10 @@
+---
 name: Deploy
 
 'on':
   workflow_run:
-    workflows: [ "Unit Tests" ]
-    types: [ completed ]
+    workflows: ["Unit Tests"]
+    types: [completed]
 jobs:
   deploy:
     runs-on: ubuntu-latest
